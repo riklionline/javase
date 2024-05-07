@@ -1,4 +1,3 @@
 # javase
 java se basic knowledge code collection.
-
-<img height="300" src="src\com\web\asset\bubblesort" width="600"/>
+![test]((https://github.com/riklionline/javase/src/com/web/asset/bubblesort.gif))
