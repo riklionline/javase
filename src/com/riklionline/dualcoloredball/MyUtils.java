@@ -51,14 +51,16 @@ public class MyUtils {
         }
     }
 
-    //冒泡排序法
-    public void sort(int[] ball){
-        for(int i=0;i<ball.length-1;i++){
-            for(int j=0;j<ball.length-1-i;j++){
-                if(ball[j]>ball[j+1]){
-                    ball[j] = ball[j]+ball[j+1];
-                    ball[j+1] = ball[j]-ball[j+1];
-                    ball[j] = ball[j]-ball[j+1];
+    /*冒泡排序法
+    * 理解排序法要把值和索引分开动态思考，保证算法结束后元素的值不能变，只是位置变了
+    */
+    public void sort(int[] a){
+        for(int i=0;i<a.length-1;i++){
+            for(int j=0;j<a.length-1-i;j++){ //内循环每完整的完成一次，最后一位都是最大值，即下一次不必比较了（ -i）
+                if(a[j]>a[j+1]){
+                    a[j] = a[j] + a[j+1]; //前面的元素把后面的元素补充上来，完成一个冒泡动作
+                    a[j+1] = a[j] - a[j+1]; //再把刚才补充的元素去掉，恢复到原值，但是换到后一个位置储存，这里完成了前值→后位
+                    a[j] = a[j] - a[j+1];  //现在的a[j]是前后之和，只需减去前面元素原值，留下的就是后面元素原值
                 }
             }
         }
