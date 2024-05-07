@@ -43,7 +43,7 @@ public class DualColoredBall {
         int[] redBallBox = new int[33];
         for (int i = 0; i < redBallBox.length; i++) {
             redBallBox[i] = i + 1;
-            //System.out.println("RedBallBox" +"[" + i + "]" + ": " + redBallBox[i]);
+            //System.out.println("RedBallBox" +"[" + i + "]" + ": " + redBallBox[i])
         }
 
         Random r = new Random();
