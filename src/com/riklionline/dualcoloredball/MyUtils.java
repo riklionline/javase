@@ -51,7 +51,7 @@ public class MyUtils {
         }
     }
 
-    //冒泡排序
+    //冒泡排序法
     public void sort(int[] ball){
         for(int i=0;i<ball.length-1;i++){
             for(int j=0;j<ball.length-1-i;j++){
