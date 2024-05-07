@@ -1,4 +1,4 @@
 # javase
 java se basic knowledge code collection.
 
-<img height="300" src="C:\Users\Administrator\Desktop\seq sort.png" width="600"/>
+<img height="300" src="src\com\web\asset\bubblesort" width="600"/>
