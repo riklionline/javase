@@ -1,4 +1,4 @@
-package src.com.riklionline.dualcoloredball;
+package com.riklionline.dualcoloredball;
 
 import java.util.Arrays;
 import java.util.Random;

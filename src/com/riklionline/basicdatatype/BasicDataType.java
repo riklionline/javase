@@ -1,4 +1,4 @@
-package src.com.riklionline.basicdatatype;
+package com.riklionline.basicdatatype;
 
 /**
  * @ClassName: BasicDataType

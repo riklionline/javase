@@ -1,4 +1,4 @@
-package src.com.riklionline.licenseplatesystem;
+package com.riklionline.licenseplatesystem;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -15,7 +15,7 @@ import java.util.Random;
 
  * @Version: v1.01
  * @Author: RikLi
- * @DateTime: 5/8/24 21:55
+ * @DateTime: 5/8/24 21:55:25
  * @Signature: “闲庭书阁飞玉箫，Coding诗酒醉年华。”
  */
 public class LicensePlateSystem {
