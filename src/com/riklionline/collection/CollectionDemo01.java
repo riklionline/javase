@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 /**
- * collection method
+ * collection method: collection存放一般数据类型（基本数据类型【自动装箱】+引用数据类型【对象】）
  * boolean add(E e) //elements
  * boolean remove(Object o)
  * void clear()
