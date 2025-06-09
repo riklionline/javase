@@ -5,6 +5,10 @@ import com.riklionline.bean.Person;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+/**
+ * iterator相当于在集合对象的基础之上套了一层工具壳，这个壳带有遍历内部元素的功能（指针）
+ */
+
 
 public class IteratorDemo01 {
 
