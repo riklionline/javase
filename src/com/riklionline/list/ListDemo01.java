@@ -20,6 +20,7 @@ public class ListDemo01 {
 
     private static void listGet() {
         List<String> list = new ArrayList<>();
+
         list.add("A");
         list.add("B");
         list.add("C");
