@@ -26,7 +26,7 @@ public class Deduplication {
         Iterator<Person> iter = list.iterator();
         while (iter.hasNext()){
             Person p = iter.next();
-            if (!linkedList.contains(p)) { //重点在这里，person类必须override equals方法
+            if (!linkedList.contains(p)) { //重点在这里，person类必须Override equals()方法
                 linkedList.add(p);
             }
         }
