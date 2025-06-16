@@ -23,7 +23,7 @@ public class TCPServer {
 
         accept.getOutputStream().write("Server: Received, thanks".getBytes());
 
-        //用于刷新输出流，确保所有缓冲的输出字节被写出
+        //用于刷新输出流，确保所有缓冲的输出字节被写出(主要用于缓冲流buffer)
         accept.getOutputStream().flush();
 
         accept.close();

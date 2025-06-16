@@ -14,7 +14,7 @@ public class TCPClient {
 
         socket.getOutputStream().write(("Client-RikLi: Hello Server!").getBytes());
 
-        //用于刷新输出流，确保所有缓冲的输出字节被写出
+        //用于刷新输出流，确保所有缓冲的输出字节被写出(主要用于缓冲流buffer)
         socket.getOutputStream().flush();
 
         byte[] bytes = new byte[1024];
