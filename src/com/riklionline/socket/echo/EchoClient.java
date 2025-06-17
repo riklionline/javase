@@ -13,7 +13,7 @@ public class EchoClient {
             PrintStream ps = new PrintStream(new BufferedOutputStream(socket.getOutputStream()));
             BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-            ps.println("Client-Rikli: Hello Server!");
+            ps.println("Rikli: Hello Server!");
             ps.flush();
 
             String info = br.readLine();

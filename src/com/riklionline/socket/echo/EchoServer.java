@@ -18,7 +18,11 @@ public class EchoServer {
 
             System.out.println("客户端连接成功：" + socket.getRemoteSocketAddress());
 
-            BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            InputStream is = socket.getInputStream();
+            System.out.println(is.getClass().getName());//java.net.SocketInputStream
+
+            //InputStreamReader是转换流，字节流——>字符流
+            BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
             String info = br.readLine();
             System.out.println(info);
