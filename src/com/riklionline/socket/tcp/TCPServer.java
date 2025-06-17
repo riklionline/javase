@@ -1,4 +1,4 @@
-package com.riklionline.socket;
+package com.riklionline.socket.tcp;
 
 import java.io.IOException;
 import java.net.ServerSocket;

@@ -1,4 +1,4 @@
-package com.riklionline.echo;
+package com.riklionline.socket.echo;
 
 import java.io.*;
 import java.net.ServerSocket;
