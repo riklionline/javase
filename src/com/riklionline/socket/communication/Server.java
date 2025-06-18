@@ -18,6 +18,7 @@ public class Server {
 
         try {
             ServerSocket server = new ServerSocket(6666);
+            System.out.println("Server started, listening on port 6666.");
 
             while (true) {
                 Socket socket = server.accept();
