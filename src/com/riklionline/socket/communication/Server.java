@@ -49,11 +49,10 @@ class UserThread implements Runnable {
     private ObjectOutputStream oos;
     private boolean flag = true;
 
-
     public UserThread(Socket socket, Vector<UserThread> vector) {
         this.socket = socket;
         this.vector = vector;
-        vector.add(this);//vector中存放的是UserThread对象
+        vector.add(this);//vector中存放的是UserThread对象，只是记录每个线程的元素关系，后面没有修改集合的操作
     }
 
     @Override
@@ -69,7 +68,7 @@ class UserThread implements Runnable {
                 Message msg = (Message) ois.readObject();
                 switch (msg.getType()) {
                     case MessageType.TYPE_LOGIN:
-                        name = msg.getFrom();
+                        name = msg.getFrom();//每个线程对象的name首次赋值且只赋值一次（后面的循环都是TYPE_SENT）
                         msg.setInfo("欢迎您：");
                         oos.writeObject(msg);
                         break;
@@ -86,7 +85,6 @@ class UserThread implements Runnable {
                         }
                         break;
                 }
-
             }
             ois.close();
             oos.close();
