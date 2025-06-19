@@ -28,11 +28,12 @@ public class Client {
             Message msg = new Message(name, null, MessageType.TYPE_LOGIN, null);
             oos.writeObject(msg);
 
+            //理论上当从网络流读取对象时，数据尚未到达之前，ois都会造成网络I/O阻塞
             msg = (Message) ois.readObject();
-            System.out.println(msg.getInfo() + msg.getFrom());//???
+            System.out.println(msg.getInfo() + msg.getFrom());
 
             //启动读取消息线程
-            es.execute(() -> {new ReadInfoThread(ois);});
+            es.execute(new ReadInfoThread(ois));
 
             //使用主线程循环发送消息
             boolean flag = true;
@@ -52,9 +53,7 @@ public class Client {
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-
     }
-
 }
 
 class ReadInfoThread implements Runnable {
@@ -76,6 +75,7 @@ class ReadInfoThread implements Runnable {
     @Override
     public void run() {
         try {
+            System.out.println("启动ReadInfoThread: " + this);
             while (flag) {
 
                 Message message = (Message) ois.readObject();

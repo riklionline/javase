@@ -1,11 +1,13 @@
 package com.riklionline.socket.communication;
 
-public class Message {
+import java.io.Serializable;
 
-    private String from;
-    private String to;
+public class Message implements Serializable {
+
+    private String from;//发送人
+    private String to;//接收人
     private int type;
-    private String info;
+    private String info;//消息体
 
     public Message(String from, String to, int type, String info) {
         this.from = from;
