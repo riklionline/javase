@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
+ * 泛型，即“参数化类型”；
  * 泛型<E>在jdk7以后可以使用菱形写法，new Class<>中不必显示声明类型
  * 约束集合中元素的类型有很多好处:
  *          1)首先是编译器可以发现错误;
