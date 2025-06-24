@@ -1,4 +1,4 @@
-package com.riklionline.genernic;
+package com.riklionline.generic;
 
 import com.riklionline.bean.Person;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import java.util.Iterator;
  *          1)首先是编译器可以发现错误;
  *          2)其次是如果不用泛型就必须在遍历过程对类型进行判断，性能差。
  */
-public class GenernicDemo01 {
+public class GenericDemo01 {
 
     public static void main(String[] args) {
 
