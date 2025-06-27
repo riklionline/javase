@@ -1,15 +1,16 @@
 package com.riklionline.wrapper;
 
 /**
- * 原始类型	包装类
- * byte	    Byte
- * boolean	Boolean
- * char	    Character
- * double	Double
- * float	Float
- * int	    Integer
- * long	    Long
- * short	Short
+ * 基本类型	 包装类
+ * -------------------------------
+ * byte	   |  Byte
+ * boolean |  Boolean
+ * char	   |  Character
+ * double  |  Double
+ * float   |  Float
+ * int	   |  Integer
+ * long	   |  Long
+ * short   |  Short
  * -------------------------------
  * 为什么要用包装类，因为功能多
  */
@@ -18,7 +19,7 @@ public class IntegerDemo {
 
     public static void main(String[] args) {
 
-        //Static方法
+        //包装类自带了很多Static方法，可直接调用
         System.out.println(Integer.MAX_VALUE);
         System.out.println(Integer.MIN_VALUE);
 
