@@ -15,13 +15,22 @@ public class ConsumerDemo {
             }
         };
 
+        Consumer<Integer> consumer2 = new Consumer<Integer>(){
+
+            @Override
+            public void accept(Integer i) {
+                System.out.println(i);
+            }
+        };
+
         //lambda表达式，注意箭头符号是单横线"->"，区别于vue和js的"=>"
-        Consumer<String> consumer2 = (s) -> {
+        Consumer<String> consumer3 = (s) -> {
             System.out.println(s);
         };
 
         consumer1.accept("Hello");
-        consumer2.accept("World");
+        consumer2.accept(16598745);
+        consumer3.accept("World");
 
     }
 }
