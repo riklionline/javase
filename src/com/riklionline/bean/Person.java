@@ -50,6 +50,7 @@ public class Person implements Serializable {
 
     @Override
     public boolean equals(Object o) {
+        System.out.println("executing person equals method...");
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
