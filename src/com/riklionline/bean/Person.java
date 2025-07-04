@@ -11,7 +11,7 @@ import java.util.Objects;
  * @DateTime: 2025/6/7 1:22 PM
  * @Signature: “闲庭书阁飞玉箫，Coding诗酒醉年华。”
  */
-public class Person implements Serializable {
+public class Person implements Serializable , Comparable<Person> {
 
     private String name;
     private int age;
@@ -61,5 +61,18 @@ public class Person implements Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(name, age);
+    }
+
+    @Override
+    public int compareTo(Person o) {
+
+        System.out.println(this + "CompareTo: " + o);
+
+        int num = this.age - o.age;
+        if (num == 0) {
+            return this.name.compareTo(o.name);
+        }
+
+        return num;
     }
 }
