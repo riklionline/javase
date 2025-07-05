@@ -14,6 +14,7 @@ public class TreeSetDemo02 {
 
         TreeSet<Person> ts = new TreeSet<>();
 
+        //new一个Person对象的时候，会自动调用Person中的 compareTo(Person o)，但是"o"是谁要依据系统排序的机制（如二叉树）决定
         ts.add(new Person("A", 25));
         ts.add(new Person("D", 19));
         ts.add(new Person("B", 19));
