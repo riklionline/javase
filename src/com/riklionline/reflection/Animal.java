@@ -15,6 +15,15 @@ public class Animal {
         this.gender = gender;
     }
 
+    private String eat(String food) {
+        System.out.println("Eating..." + food);
+        return "I'm full.";
+    }
+
+    public void sleep(){
+        System.out.println("The animal is go to sleeping...");
+    }
+
     public String getName() {
         return name;
     }

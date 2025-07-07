@@ -1,0 +1,6 @@
+name = kaka
+age = 6
+gender = 男
+weight = 55
+height = 121
+hobby = 吃
