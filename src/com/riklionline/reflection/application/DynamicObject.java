@@ -26,7 +26,7 @@ public class DynamicObject {
 
         Method method = clazz.getDeclaredMethod(methodName);
 
-        //继续调用新建对象的成员方法（注意在反射机制里，成员方法与对象是分开创建的，所以理论上存在对应不上的可能，要靠代码开发保证）
+        //继续调用新建对象实例的成员方法（注意在反射机制里，成员方法与对象是分开创建的，所以理论上存在对应不上的可能，要靠代码开发保证）
         method.invoke(o);
 
     }
