@@ -9,9 +9,10 @@ public class Animal {
     public Animal() {
     }
 
-    public Animal(String name, int age) {
+    public Animal(String name, int age, String gender) {
         this.name = name;
         this.age = age;
+        this.gender = gender;
     }
 
     public String getName() {
@@ -34,7 +35,8 @@ public class Animal {
     public String toString() {
         return "Animal{" +
                 "name='" + name + '\'' +
-                ", age=" + age +
+                ", age=" + age + '\''+
+                ", gender='" + gender + '\'' +
                 '}';
     }
 }
