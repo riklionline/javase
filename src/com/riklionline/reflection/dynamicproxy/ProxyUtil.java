@@ -10,6 +10,7 @@ public class ProxyUtil {
 
         Star star = new BigStar();
         return star;
+
     }
 
 }
