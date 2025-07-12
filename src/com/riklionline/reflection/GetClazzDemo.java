@@ -1,6 +1,10 @@
 package com.riklionline.reflection;
 
 /**
+ * 反射的作用：
+ * 1.可以实现反编译，.class->java
+ * 2.通过反射机制获取类的属性、方法等
+ * ---------------------------------------------------------------------
  * 类的全生命周期：Loading->Link[Verification->Preparation->Resolution]->Initialization->Using->Unloading
  * 加载阶段：查找并读取类文件二进制数据
  * 验证阶段：验证类文件格式正确性
@@ -17,8 +21,11 @@ public class GetClazzDemo {
     public static void main(String[] args) throws ClassNotFoundException {
 
         /*
-         *以下是三种获取class对象(类的字节码文件)的方式
-         *输出结果都是：class com.riklionline.reflection.Animal
+         * 以下是三种获取.class(字节码文件)的Class对象，当JVM把.class文件读取到内存时，都会创建这个.class的一个Class对象（唯一）
+         * Class类是java.lang下的一个jdk自带的类
+         * 输出结果都是：class com.riklionline.reflection.Animal，
+         * clazz1、clazz2、clazz3都指向同一个内存地址，说明Animal在运行时只创建了一个Class对象
+         * 注意区分：这个Class对象与 new Animal()不是一个，Class对象是描述一个类的对象，而new Animal()是对象实例
          */
 
         //1.最常用，Class.forName()，静态方法 ("com.riklionline.reflection.Animal")
