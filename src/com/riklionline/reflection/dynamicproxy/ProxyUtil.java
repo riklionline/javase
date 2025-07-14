@@ -1,7 +1,6 @@
 package com.riklionline.reflection.dynamicproxy;
 
 import com.riklionline.reflection.dynamicproxy.impl.BigStar;
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -27,7 +26,7 @@ public class ProxyUtil {
          */
 
         Star star = (Star) Proxy.newProxyInstance(Star.class.getClassLoader(),
-                new Class[]{Star.class},
+                new Class[]{Star.class}, //等同于 Star.class.getInterfaces()
 
                 //参数 3)：用来指定生成的代理对象要做什么事情
                 new InvocationHandler() {
