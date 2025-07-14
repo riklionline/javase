@@ -3,6 +3,7 @@ package com.riklionline.reflection;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Arrays;
+import java.util.Date;
 
 /**
  * 反射的作用：
@@ -22,7 +23,7 @@ import java.util.Arrays;
 
 public class GetClazzDemo {
 
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 
         /*
          * 以下是三种获取.class(字节码文件)的Class对象，当JVM把.class文件读取到内存时，都会在内存中创建这个.class的一个Class对象（唯一）
@@ -38,6 +39,12 @@ public class GetClazzDemo {
         Class<?> flowerClass = Class.forName("com.riklionline.reflection.Flower");
         System.out.println(clazz1);
         System.out.println(flowerClass.getName());//验证反射机制确实是从.class文件加载到内存后开始工作
+
+        Class<?> dateClass = Class.forName("java.util.Date");
+        Object o = dateClass.newInstance();
+        if (o instanceof Date){
+            System.out.println(o);
+        }
 
         //2.常用于当作参数传递，synchronized(Animal.class)
         Class<Animal> clazz2 = Animal.class;
