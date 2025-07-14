@@ -18,7 +18,7 @@ public class ProxyUtil {
          *
          * Proxy.newProxyInstance(ClassLoader, Class<?>[] Interface, InvocationHandler h)
          * 参数 1）：指定一个类加载器，来加载生成的代理类
-         * 参数 2）：指定接口，因为原始对象也实现了这个接口，所以代理对象也要实现这个接口的方法，才能使用这个方法
+         * 参数 2）：指定接口，因为原始对象也实现了这个接口，所以代理对象也要实现这个接口，才能使用这个接口的方法
          *          Star.class 表达式返回的是：
                     · 一个 java.lang.Class 类型的对象（字节码）
                     · 描述Star接口的元数据对象（不是接口实例，只需要获取“描述接口”的元数据即可）
@@ -26,7 +26,7 @@ public class ProxyUtil {
          * 参数 3）：用来指定生成的代理对象要做什么事情
          */
 
-        Star star = (Star) Proxy.newProxyInstance(ProxyUtil.class.getClassLoader(),
+        Star star = (Star) Proxy.newProxyInstance(Star.class.getClassLoader(),
                 new Class[]{Star.class},
 
                 //参数 3)：用来指定生成的代理对象要做什么事情
